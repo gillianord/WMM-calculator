@@ -1,0 +1,6 @@
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+pyproj>=3.6
+pygeomag>=1.1.0
+cartopy>=0.22
