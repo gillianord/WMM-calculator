@@ -1,4 +1,22 @@
-* Python based Calculator for declination between geographic and magnetic North for a particular coordinate and date using the World Magnetic Model (pygeomag)
-* Coordinates can be UTM Easting and Northing or longitude and latitude
-* Output is a map of the area with a compass needle and a header with the input coordinates date and output declination and uncertainty similar to the calculator on the NOAA website https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml
-* Includes WMM 2020 and 2025 models which cover dates from December 31st 2019 to 2029
+# WMM Declination Calculator
+Desktop calculator for magnetic declination at a chosen location and date,
+using the World Magnetic Model (WMM) via [pygeomag](https://github.com/boxpet/pygeomag).
+
+## Features
+- Location input as UTM (easting, northing, zone, hemisphere) or latitude/longitude
+- Date selection by year / month / day dropdowns
+- Valid range: **2019-12-31** to **2029-12-31** (WMM-2020 / WMM-2025)
+- Time is treated as **00:00** on the selected day
+- Map figure with declination, uncertainty, and magnetic-north compass
+
+## Requirements
+- Python 3.10+
+- See `requirements.txt` (`numpy`, `pandas`, `matplotlib`, `pyproj`, `pygeomag`, `cartopy`)
+Internet access is needed for the shaded-relief basemap tiles when calculating.
+
+## Setup
+```powershell
+cd "path\to\WMM declination calculator"
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
